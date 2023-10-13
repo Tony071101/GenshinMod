@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.unity.animation.rigging": {
+      "version": "1.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.4.1",
+        "com.unity.test-framework": "1.1.24"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.8.8",
       "depth": 1,
@@ -43,7 +53,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.21",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -136,13 +146,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.toonshader": {
-      "version": "file:C:/Users/Admin/Downloads/com.unity.toonshader-development-v1/com.unity.toonshader",
+      "version": "0.9.5-preview",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.unity.film-internal-utilities": "0.18.4-preview",
         "com.unity.render-pipelines.core": "10.0.0"
-      }
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
       "version": "1.0.0",

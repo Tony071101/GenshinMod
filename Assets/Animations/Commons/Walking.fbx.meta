@@ -533,12 +533,12 @@ ModelImporter:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Beta_Surface
+    - name: Beta_Joints
       parentName: Walking(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Beta_Joints
+    - name: Beta_Surface
       parentName: Walking(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
@@ -725,7 +725,7 @@ ModelImporter:
     - name: mixamorig:LeftHandThumb1
       parentName: mixamorig:LeftHand
       position: {x: 0.026817314, y: 0.024661448, z: 0.015761929}
-      rotation: {x: 0.11634474, y: 0.1233108, z: -0.337319, w: 0.92599905}
+      rotation: {x: 0.11634475, y: 0.123310804, z: -0.33731902, w: 0.9259991}
       scale: {x: 1.0000004, y: 1.0000007, z: 1.0000006}
     - name: mixamorig:LeftHandThumb2
       parentName: mixamorig:LeftHandThumb1
@@ -735,7 +735,7 @@ ModelImporter:
     - name: mixamorig:LeftHandThumb3
       parentName: mixamorig:LeftHandThumb2
       position: {x: 1.2823348e-17, y: 0.034183882, z: 5.503636e-16}
-      rotation: {x: -0.001531382, y: -0.00074530457, z: 0.0060732123, w: 0.9999801}
+      rotation: {x: -0.001531382, y: -0.0007453046, z: 0.0060732123, w: 0.99998015}
       scale: {x: 1, y: 1.0000005, z: 1.0000006}
     - name: mixamorig:LeftHandThumb4
       parentName: mixamorig:LeftHandThumb3

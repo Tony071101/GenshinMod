@@ -82,14 +82,6 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human:
-    - boneName: "\u8170"
-      humanName: Hips
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
     - boneName: "\u8DB3D.L"
       humanName: LeftUpperLeg
       limit:
@@ -500,6 +492,14 @@ ModelImporter:
         modified: 0
     - boneName: "\u4EBA\u6307\uFF13.L"
       humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: "\u8170"
+      humanName: Hips
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}

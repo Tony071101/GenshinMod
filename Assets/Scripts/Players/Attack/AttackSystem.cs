@@ -51,7 +51,7 @@ public class AttackSystem : MonoBehaviour
         Destroy(currentWeaponSheath, destroyTimer);
     }
 
-    public void HandleAttack(){
+    private void HandleAttack(){
         if(_input.attack){
             anim.SetTrigger("Attack");
 
@@ -59,5 +59,13 @@ public class AttackSystem : MonoBehaviour
             _input.jump = false;
         }
         _input.attack = false;
+    }
+
+    public void StartDealDamage(){
+        currentWeaponInHand.GetComponentInChildren<DamageDealer>().StartDealDamage();
+    }
+
+    public void EndDealDamage(){
+        currentWeaponInHand.GetComponentInChildren<DamageDealer>().EndDealDamage();
     }
 }

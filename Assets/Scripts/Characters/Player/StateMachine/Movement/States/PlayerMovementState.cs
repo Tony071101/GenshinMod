@@ -49,6 +49,21 @@ public class PlayerMovementState : IState
         Move();
     }
 
+    public virtual void OnAnimationEnterEvent()
+    {
+        
+    }
+
+    public virtual void OnAnimationExitEvent()
+    {
+        
+    }
+
+    public virtual void OnAnimationTransitionEvent()
+    {
+        
+    }
+
     #endregion
 
     #region Main Methods

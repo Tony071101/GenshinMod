@@ -10,6 +10,7 @@ public class PlayerMovementStateMachine : StateMachine
     public PlayerWalkingState WalkingState { get; }
     public PlayerRunningState RunningState { get; }
     public PlayerSprintingState SprintingState { get; }
+    public PlayerDashingState DashingState { get; }
     public PlayerMovementStateMachine(Player player){
         Player = player;
         ReusableData = new PlayerStateReusableData();
@@ -17,5 +18,6 @@ public class PlayerMovementStateMachine : StateMachine
         WalkingState = new PlayerWalkingState(this);
         RunningState = new PlayerRunningState(this);
         SprintingState = new PlayerSprintingState(this);
+        DashingState = new PlayerDashingState(this);
     }
 }

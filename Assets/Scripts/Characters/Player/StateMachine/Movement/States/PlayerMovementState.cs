@@ -125,7 +125,7 @@ public class PlayerMovementState : IState
 
     protected float GetMovementSpeed()
     {
-        return movementData.BaseSpeed * stateMachine.ReusableData.MovementSpeedModifier;
+        return movementData.BaseSpeed * stateMachine.ReusableData.MovementSpeedModifier * stateMachine.ReusableData.MovementOnSlopesSpeedModifier;
     }
 
     protected Vector3 GetPlayerHorizontalVelocity()
@@ -135,6 +135,10 @@ public class PlayerMovementState : IState
         playerHorizontalVelocity.y = 0f;
 
         return playerHorizontalVelocity;
+    }
+
+    protected Vector3 GetPlayerVerticalVelocity(){
+        return new Vector3(0f, stateMachine.Player._rigidbody.velocity.y, 0f);
     }
 
     protected void RotateTowardTargetRotation()

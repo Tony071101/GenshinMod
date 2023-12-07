@@ -2728,6 +2728,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 932326612945285666, guid: 1acac8b98bfed9d45bdf7d8946ea5627,
+        type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 932326612945285666, guid: 1acac8b98bfed9d45bdf7d8946ea5627,
+        type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2461132393788167420, guid: 1acac8b98bfed9d45bdf7d8946ea5627,
         type: 3}
       propertyPath: m_Name

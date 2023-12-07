@@ -209,6 +209,20 @@ public class PlayerMovementState : IState
     {
         stateMachine.Player._playerInput.PlayerActions.WalkToggle.started -= OnWalkToggleStarted;
     }
+
+    protected void DecelerateHorizontally(){
+        Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+        stateMachine.Player._rigidbody.AddForce(-playerHorizontalVelocity * stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
+    }
+
+    protected bool IsMovingHorizontally(float minimumMagnitude = 0.1f){
+        Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+        Vector2 playerHorizontalMovement = new Vector2(playerHorizontalVelocity.x, playerHorizontalVelocity.y);
+
+        return playerHorizontalMovement.magnitude > minimumMagnitude;
+    }
     #endregion
 
     #region Input Methods

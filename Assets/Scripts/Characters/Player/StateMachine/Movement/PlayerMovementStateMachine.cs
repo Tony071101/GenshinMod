@@ -11,6 +11,9 @@ public class PlayerMovementStateMachine : StateMachine
     public PlayerRunningState RunningState { get; }
     public PlayerSprintingState SprintingState { get; }
     public PlayerDashingState DashingState { get; }
+    public PlayerLightStoppingState LightStoppingState { get; }
+    public PlayerMediumStoppingState MediumStoppingState { get; }
+    public PlayerHardStoppingState HardStoppingState { get; }
     public PlayerMovementStateMachine(Player player){
         Player = player;
         ReusableData = new PlayerStateReusableData();
@@ -19,5 +22,8 @@ public class PlayerMovementStateMachine : StateMachine
         RunningState = new PlayerRunningState(this);
         SprintingState = new PlayerSprintingState(this);
         DashingState = new PlayerDashingState(this);
+        LightStoppingState = new PlayerLightStoppingState(this);
+        MediumStoppingState = new PlayerMediumStoppingState(this);
+        HardStoppingState = new PlayerHardStoppingState(this);
     }
 }

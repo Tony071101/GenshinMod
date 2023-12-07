@@ -97,7 +97,7 @@ public class PlayerGroundedState : PlayerMovementState
         stateMachine.ChangeState(stateMachine.IdlingState);
     }
 
-    protected  virtual void OnDashStarted(InputAction.CallbackContext context)
+    protected virtual void OnDashStarted(InputAction.CallbackContext context)
     {
         stateMachine.ChangeState(stateMachine.DashingState);
     }

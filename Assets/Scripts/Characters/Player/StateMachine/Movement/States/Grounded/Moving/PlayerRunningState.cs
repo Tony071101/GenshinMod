@@ -43,7 +43,7 @@ public class PlayerRunningState : PlayerMovingState
     private void StopRunning()
     {
         if(stateMachine.ReusableData.MovementInput == Vector2.zero){
-            stateMachine.ChangeState(stateMachine.IdlingState);
+            stateMachine.ChangeState(stateMachine.MediumStoppingState);
             return;
         }
         stateMachine.ChangeState(stateMachine.WalkingState);

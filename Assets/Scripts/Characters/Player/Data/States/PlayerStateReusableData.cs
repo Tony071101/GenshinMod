@@ -34,4 +34,6 @@ public class PlayerStateReusableData
             return ref dampedTargetRotationPassedTime;
         }
     }
+
+    public PlayerRotationData RotationData { get; set; }
 }

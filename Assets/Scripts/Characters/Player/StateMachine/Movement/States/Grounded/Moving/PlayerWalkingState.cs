@@ -15,6 +15,8 @@ public class PlayerWalkingState : PlayerMovingState
         base.Enter();
 
         stateMachine.ReusableData.MovementSpeedModifier = movementData.WalkData.SpeedModifier;
+
+        stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.WeakForce;
     }
     #endregion
 

@@ -8991,10 +8991,6 @@ GameObject:
   - component: {fileID: 816751676765022311}
   - component: {fileID: 7198687795072683835}
   - component: {fileID: 7797496844520767584}
-  - component: {fileID: 9202014363225841258}
-  - component: {fileID: 932326612945285666}
-  - component: {fileID: 32943638091166616}
-  - component: {fileID: 6523257013769274927}
   m_Layer: 0
   m_Name: Kafka_FBX
   m_TagString: Player
@@ -10144,89 +10140,6 @@ MonoBehaviour:
   - {fileID: 1753659393053296338}
   - {fileID: 8876237412246459988}
   - {fileID: 5355917788205247729}
---- !u!136 &9202014363225841258
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461132393788167420}
-  m_Material: {fileID: 13400000, guid: 34f4b45b7993e13439ae5c7cce8df415, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Height: 1.3499999
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.125, z: 0}
---- !u!54 &932326612945285666
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461132393788167420}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 112
-  m_CollisionDetection: 1
---- !u!114 &32943638091166616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461132393788167420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b30b7795a3fcc1048bda2a64dcbcf745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6523257013769274927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461132393788167420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8452ba1c79f7f914096e2be4d69272a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Data>k__BackingField: {fileID: 11400000, guid: 65b5b0e2d729f3f408cf337c25134e37,
-    type: 2}
-  <ColliderUtility>k__BackingField:
-    <DefaultColliderData>k__BackingField:
-      <Height>k__BackingField: 1.8
-      <CenterY>k__BackingField: 0.9
-      <Radius>k__BackingField: 0.2
-    <SlopeData>k__BackingField:
-      <StepHeightPercentage>k__BackingField: 0.25
 --- !u!1 &2477241783001987958
 GameObject:
   m_ObjectHideFlags: 0
@@ -15905,7 +15818,7 @@ Transform:
   m_GameObject: {fileID: 4196426428333252865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

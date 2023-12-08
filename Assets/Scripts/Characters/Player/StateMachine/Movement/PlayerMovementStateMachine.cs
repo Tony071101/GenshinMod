@@ -14,16 +14,21 @@ public class PlayerMovementStateMachine : StateMachine
     public PlayerLightStoppingState LightStoppingState { get; }
     public PlayerMediumStoppingState MediumStoppingState { get; }
     public PlayerHardStoppingState HardStoppingState { get; }
+    public PlayerJumpingState JumpingState { get; }
     public PlayerMovementStateMachine(Player player){
         Player = player;
         ReusableData = new PlayerStateReusableData();
+        
         IdlingState = new PlayerIdlingState(this);
         WalkingState = new PlayerWalkingState(this);
         RunningState = new PlayerRunningState(this);
         SprintingState = new PlayerSprintingState(this);
         DashingState = new PlayerDashingState(this);
+
         LightStoppingState = new PlayerLightStoppingState(this);
         MediumStoppingState = new PlayerMediumStoppingState(this);
         HardStoppingState = new PlayerHardStoppingState(this);
+
+        JumpingState = new PlayerJumpingState(this);
     }
 }

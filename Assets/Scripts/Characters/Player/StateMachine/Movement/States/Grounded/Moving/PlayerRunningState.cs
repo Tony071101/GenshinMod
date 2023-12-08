@@ -20,6 +20,8 @@ public class PlayerRunningState : PlayerMovingState
 
         stateMachine.ReusableData.MovementSpeedModifier = movementData.RunData.SpeedModifier;
 
+        stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.MediumForce;
+
         startTime = Time.time;
     }
 

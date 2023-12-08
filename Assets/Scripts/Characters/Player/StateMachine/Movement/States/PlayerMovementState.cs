@@ -7,10 +7,12 @@ public class PlayerMovementState : IState
 {
     protected PlayerMovementStateMachine stateMachine;
     protected PlayerGroundedData movementData;
+    protected PlayerAirborneData airborneData;
     public PlayerMovementState(PlayerMovementStateMachine playerMovementStateMachine){
         stateMachine = playerMovementStateMachine;
 
         movementData = stateMachine.Player.Data.GroundedData;
+        airborneData = stateMachine.Player.Data.AirborneData;
 
         InitializedData();
     }
@@ -226,7 +228,7 @@ public class PlayerMovementState : IState
     protected bool IsMovingHorizontally(float minimumMagnitude = 0.1f){
         Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
 
-        Vector2 playerHorizontalMovement = new Vector2(playerHorizontalVelocity.x, playerHorizontalVelocity.y);
+        Vector2 playerHorizontalMovement = new Vector2(playerHorizontalVelocity.x, playerHorizontalVelocity.z);
 
         return playerHorizontalMovement.magnitude > minimumMagnitude;
     }

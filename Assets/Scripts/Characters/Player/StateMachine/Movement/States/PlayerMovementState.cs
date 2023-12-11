@@ -66,6 +66,14 @@ public class PlayerMovementState : IState
         
     }
 
+    public virtual void OnTriggerEnter(Collider collider)
+    {
+        if(stateMachine.Player.LayerData.IsGroundLayer(collider.gameObject.layer)){
+            OnContactWithGround(collider);
+
+            return;
+        }
+    }
     #endregion
 
     #region Main Methods
@@ -225,12 +233,31 @@ public class PlayerMovementState : IState
         stateMachine.Player._rigidbody.AddForce(-playerHorizontalVelocity * stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
     }
 
+    protected void DecelerateVertically(){
+        Vector3 playerVerticalVelocity = GetPlayerVerticalVelocity();
+
+        stateMachine.Player._rigidbody.AddForce(-playerVerticalVelocity * stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
+    }
+
     protected bool IsMovingHorizontally(float minimumMagnitude = 0.1f){
         Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
 
         Vector2 playerHorizontalMovement = new Vector2(playerHorizontalVelocity.x, playerHorizontalVelocity.z);
 
         return playerHorizontalMovement.magnitude > minimumMagnitude;
+    }
+
+    protected bool IsMovingUp(float minimumVelocity = 0.1f){
+        return GetPlayerVerticalVelocity().y > minimumVelocity;
+    }
+
+    protected bool IsMovingDown(float minimumVelocity = 0.1f){
+        return GetPlayerVerticalVelocity().y < -minimumVelocity;
+    }
+
+    protected virtual void OnContactWithGround(Collider collider)
+    {
+        
     }
     #endregion
 

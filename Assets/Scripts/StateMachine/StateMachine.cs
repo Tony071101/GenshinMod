@@ -40,4 +40,8 @@ public abstract class StateMachine
     public void OnTriggerEnter(Collider collider){
         currentState?.OnTriggerEnter(collider);
     }
+
+    public void OnTriggerExit(Collider collider){
+        currentState?.OnTriggerExit(collider);
+    }
 }

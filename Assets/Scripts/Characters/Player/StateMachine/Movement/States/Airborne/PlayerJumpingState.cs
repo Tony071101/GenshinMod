@@ -7,6 +7,7 @@ public class PlayerJumpingState : PlayerAirborneState
 {
     private PlayerJumpData jumpData;
     private bool shouldKeepRotating;
+    private bool canStartFalling;
 
     public PlayerJumpingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
     {
@@ -34,6 +35,25 @@ public class PlayerJumpingState : PlayerAirborneState
         base.Exit();
 
         SetBaseRotationData();
+
+        canStartFalling = false;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if(!canStartFalling && IsMovingUp(0f))
+        {
+            canStartFalling = true;
+        }
+
+        if(!canStartFalling || GetPlayerVerticalVelocity().y > 0)
+        {
+            return;
+        }
+
+        stateMachine.ChangeState(stateMachine.FallingState);
     }
 
     public override void PhysicsUpdate()

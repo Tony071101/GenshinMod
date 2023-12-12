@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public PlayerSO Data { get; private set; }
     
     [field: Header("Collisions")]
-    [field: SerializeField] public CapsuleColliderUtility ColliderUtility { get; private set; }
+    [field: SerializeField] public PlayerCapsuleColliderUtility ColliderUtility { get; private set; }
     [field: SerializeField] public PlayerLayerData LayerData { get; private set; }
     public Rigidbody _rigidbody { get; private set; }
     public PlayerInput _playerInput { get; private set; }
@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider) {
         movementStateMachine.OnTriggerEnter(collider);
+    }
+
+    private void OnTriggerExit(Collider collider) {
+        movementStateMachine.OnTriggerExit(collider);
     }
 
     private void Update() {

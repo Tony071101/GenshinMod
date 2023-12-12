@@ -83,6 +83,13 @@ public class PlayerSprintingState : PlayerMovingState
 
         stateMachine.Player._playerInput.PlayerActions.Sprint.performed -= OnSprintPerformed;
     }
+
+    protected override void OnFall()
+    {
+        shouldResetSprintState = false;
+
+        base.OnFall();
+    }
     #endregion
 
     #region Input Methods

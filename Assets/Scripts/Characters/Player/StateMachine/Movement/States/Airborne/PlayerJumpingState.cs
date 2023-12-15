@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerJumpingState : PlayerAirborneState
 {
@@ -83,7 +84,10 @@ public class PlayerJumpingState : PlayerAirborneState
 
         Vector3 jumpDirection = stateMachine.Player.transform.forward;
 
-        if(shouldKeepRotating){
+        if(shouldKeepRotating)
+        {
+            UpdateTargetRotation(GetMovementInputDirection());
+
             jumpDirection = GetTargetRotationDirection(stateMachine.ReusableData.CurrentTargetRotation.y);
         }
 
@@ -114,6 +118,12 @@ public class PlayerJumpingState : PlayerAirborneState
         ResetVelocity();
 
         stateMachine.Player._rigidbody.AddForce(jumpForce, ForceMode.VelocityChange);
+    }
+    #endregion
+
+    #region Input Methods
+    protected override void OnMovementCanceled(InputAction.CallbackContext context)
+    {
     }
     #endregion
 }

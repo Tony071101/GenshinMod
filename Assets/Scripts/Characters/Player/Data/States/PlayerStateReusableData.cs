@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStateReusableData
@@ -6,6 +7,8 @@ public class PlayerStateReusableData
     public float MovementSpeedModifier { get; set;} = 1f;
     public float MovementOnSlopesSpeedModifier { get; set;} = 1f;
     public float MovementDecelerationForce { get; set;} = 1f;
+    public List<PlayerCameraRecenteringData> SidewaysCameraRecenteringData { get; set; }
+    public List<PlayerCameraRecenteringData> BackwardsCameraRecenteringData { get; set; }
     public bool ShouldWalk { get; set; }
     public bool ShouldSprint { get; set; }
     private Vector3 currentTargetRotation;

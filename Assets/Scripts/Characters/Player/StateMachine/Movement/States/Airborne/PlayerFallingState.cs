@@ -39,7 +39,7 @@ public class PlayerFallingState : PlayerAirborneState
 
     protected override void OnContactWithGround(Collider collider)
     {
-        float fallDistance = Mathf.Abs(playerPositionOnEnter.y - stateMachine.Player.transform.position.y);
+        float fallDistance = playerPositionOnEnter.y - stateMachine.Player.transform.position.y;
 
         if(fallDistance < fallData.MinimumDistanceToBeConsideredHardFall)
         {

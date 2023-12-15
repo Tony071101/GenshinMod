@@ -11,11 +11,18 @@ public class CapsuleColliderUtility
     [field: SerializeField] public SlopeData SlopeData { get; private set; }
 
     public void Initialize(GameObject gameObject){
-        if(CapsuleColliderData != null){
+        if(CapsuleColliderData != null)
+        {
             return;
         }
         CapsuleColliderData = new CapsuleColliderData();
         CapsuleColliderData.Initialize(gameObject);
+        OnInitialize();
+    }
+
+    protected virtual void OnInitialize()
+    {
+
     }
 
     public void CalculateCapsuleColliderDimensions(){

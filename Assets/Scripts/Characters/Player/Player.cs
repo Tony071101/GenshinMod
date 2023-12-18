@@ -15,17 +15,23 @@ public class Player : MonoBehaviour
     [field: Header("Cameras")]
     [field: SerializeField] public PlayerCameraUtility CameraUtility { get; private set; }
 
+    [field: Header("Animations")]
+    [field: SerializeField] public PlayerAnimationData AnimationData { get; private set; }
+
     public Rigidbody _rigidbody { get; private set; }
+    public Animator _animator { get; private set; }
     public PlayerInput _playerInput { get; private set; }
     public Transform MainCameraTransform { get; private set; }
     private PlayerMovementStateMachine movementStateMachine;
 
     private void Awake() {
         _rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponentInChildren<Animator>();
         _playerInput = GetComponent<PlayerInput>();
         ColliderUtility.Initialize(gameObject);
         ColliderUtility.CalculateCapsuleColliderDimensions();
         CameraUtility.Initialize();
+        AnimationData.Initialize();
         MainCameraTransform = Camera.main.transform;
         movementStateMachine = new PlayerMovementStateMachine(this);
     }
@@ -54,5 +60,20 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate() {
         movementStateMachine.PhysicsUpdate();
+    }
+
+    public void OnMovementStateAnimationEnterEvent()
+    {
+        movementStateMachine.OnAnimationEnterEvent();
+    }
+
+    public void OnMovementStateAnimationExitEvent()
+    {
+        movementStateMachine.OnAnimationExitEvent();
+    }
+
+    public void OnMovementStateAnimationTransitionEvent()
+    {
+        movementStateMachine.OnAnimationTransitionEvent();
     }
 }

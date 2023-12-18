@@ -17,6 +17,8 @@ public class PlayerHardLandingState : PlayerLandingState
 
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.HardLandingParameterHash);
+
         stateMachine.Player._playerInput.PlayerActions.Movement.Disable();
 
         ResetVelocity();
@@ -25,6 +27,8 @@ public class PlayerHardLandingState : PlayerLandingState
     public override void Exit()
     {
         base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.HardLandingParameterHash);
 
         stateMachine.Player._playerInput.PlayerActions.Movement.Enable();
     }

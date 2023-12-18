@@ -13,9 +13,18 @@ public class PlayerHardStoppingState : PlayerStoppingState
     {
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.HardStopParameterHash);
+
         stateMachine.ReusableData.MovementDecelerationForce = movementData.StopData.HardDecelerationForce;
 
         stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.StrongForce;
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.HardStopParameterHash);
     }
     #endregion
 

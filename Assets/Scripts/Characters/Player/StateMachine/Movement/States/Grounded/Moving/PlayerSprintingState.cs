@@ -22,6 +22,8 @@ public class PlayerSprintingState : PlayerMovingState
 
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.SprintParameterHash);
+
         stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.StrongForce;
 
         shouldResetSprintState = true;
@@ -32,6 +34,8 @@ public class PlayerSprintingState : PlayerMovingState
     public override void Exit()
     {
         base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.SprintParameterHash);
 
         if(shouldResetSprintState){
             keepSprinting = false;

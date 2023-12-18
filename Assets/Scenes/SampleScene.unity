@@ -919,6 +919,22 @@ MonoBehaviour:
     <VirtualCamera>k__BackingField: {fileID: 1166472004}
     <DefaultHorizontalWaitTime>k__BackingField: 0
     <DefaultHorizontalRecenteringTime>k__BackingField: 4
+  <AnimationData>k__BackingField:
+    groundedParameterName: Grounded
+    movingParameterName: Moving
+    stoppingParameterName: Stopping
+    landingParameterName: Landing
+    airborneParameterName: Airborne
+    idleParameterName: isIdling
+    dashParameterName: isDashing
+    walkParameterName: isWalking
+    runParameterName: isRunning
+    sprintParameterName: isSprinting
+    mediumStopParameterName: isMediumStopping
+    hardStopParameterName: isHardStopping
+    rollParameterName: isRolling
+    hardLandingParameterName: isHardLanding
+    fallParameterName: isFalling
 --- !u!114 &1379626325
 MonoBehaviour:
   m_ObjectHideFlags: 0

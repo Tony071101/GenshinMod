@@ -20,12 +20,16 @@ public class PlayerWalkingState : PlayerMovingState
 
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.WalkParameterHash);
+
         stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.WeakForce;
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.WalkParameterHash);
 
         SetBaseCameraRecenteringData();
     }
